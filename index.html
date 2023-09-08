@@ -8,25 +8,69 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <div class="profile">
-            <img src="Snapchat-1591027345.jpg" alt="Odiliemedokosi"  class="team-image" data-testid="slackDisplayImage">
-            <h3 data-testid="slackUserName">Odiliemedokosi</h3>
-        </div>
-
-        <div class="section-two">
-            <div class="date-Time">
-           <p id="day" data-testid="currentDayOfTheWeek"></p>
-           <p id="time" data-testid="currentUTCTime" ></p>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+          rel="shortcut icon"
+          href="./assets/icon/favicon.ico"
+          type="image/x-icon"
+          sizes="5px"
+        />
+        <title>Stage 1 || HNG</title>
+      </head>
+    
+      <body>
+        <div class="container">
+    
+          <!-- ... Slack Details section ... -->
+          <section id="slack-section">
+            <div>
+              <img
+                src="Snapchat-1591027345.jpg"
+                width="200"
+                height="200"
+                alt="Odiliemedokosi"
+                data-testid="slackDisplayImage"
+              />
             </div>
     
-            <p class="track" data-testid="myTrack">Track:Frontend</p>
-            <a href="https://github.com/Miraclekosi/hngtaskone" data-testid="githubURL">Github</a>
-            
+            <div>
+              <h1 data-testid="slackUserName">Odiliemedokosi</h1>
+            </div>
+          </section>
+    
+          <!-- Date and Time Section -->
+          <section id="date-and-time-section">
+            <div
+              data-testid="currentDayOfTheWeek"
+              id="DayOfWeek"
+              style="text-align: center"
+            ></div>
+    
+            <div data-testid="currentUTCTime" id="currentTime"></div>
+          </section>
+    
+          <!-- ... Track Info Section...  -->
+          <section id="track-info">
+            <h2 data-testid="myTrack">Frontend Track</h2>
+          </section>
+    
+          <!-- Github Url section  -->
+          <section id="repo-section">
+            <a
+              data-testid="githubURL"
+              id="repoUrl"
+              href="https://github.com/Miraclekosi/hngtaskone"
+              target="_blank"
+              >Github Repo</a
+            >
+          </section>
         </div>
     
-    </main>
-
    
 
     <script src="script.js"></script>
