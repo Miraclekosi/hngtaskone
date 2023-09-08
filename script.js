@@ -3,23 +3,27 @@ let dataDay = document.getElementById('day')
 let dataTime = document.getElementById('time')
 
 // Day
-let Day = new Date();
 
-let daysOfTheWeek =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
-let DayofWeek =daysOfTheWeek[Day.getDay()];
+// ... calling the element which holds the day
+      const currentDayOfWeek = document.getElementById("day");
 
-console.log(DayofWeek)
+      //   calling the element which will hold the UTC Time
+      const currentTime = document.getElementById("time");
 
-dataDay.innerText =DayofWeek
+      // ...Function to hold date and time so an interval would be set to update every seconds..
+      const updateTime = () => {
+        const dayOfWeek = new Date().toLocaleDateString((en = "us"), {
+          weekday: "long",
+        });
 
-// Time
+        //declaring a time var before converting to utc
+        const time = new Date();
+        const utcTime = time.toUTCString();
 
-let CurTime = new Date()
-let hours = CurTime.getHours();
-let minutes= CurTime.getMinutes();
-let Seconds = CurTime.getSeconds()
-
-let Time = `${hours}:${minutes}:${Seconds}`
-
-dataTime.innerText = Time
+        // ...assigning day and time variables to the holder...
+        currentDayOfWeek.textContent = "Day:" + " " + dayOfWeek;
+        currentTime.textContent = "Time in UTC : " + " " + utcTime;
+      };
+      updateTime();
+      setInterval(updateTime, 1000);
